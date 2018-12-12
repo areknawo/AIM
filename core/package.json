@@ -1,0 +1,5 @@
+{
+  "name": "@aimlang/core",
+  "description": "AIM programming language core (lexer & parser)",
+  "version": "0.1.0"
+}

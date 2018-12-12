@@ -1,0 +1,10 @@
+{
+  "name": "@aimlang/aim",
+  "version": "0.1.0",
+  "description": "AIM programming language implementation",
+  "repository": "https://github.com/areknawo/aim",
+  "author": "areknawo",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["core", "syntax"]
+}
