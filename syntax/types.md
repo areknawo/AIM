@@ -19,7 +19,8 @@ For ease-of-use AIM is equipped with basic, standard types set:
 * **bool** - type indicating **logical value** (either **true** or **false**)
 * **char** - type indicating standard **ASCII character**
 * **uchar** - type indicating **Unicode character**
-* **string** - predefined type for **array of char**s**/uchar**s
+* **string** - predefined type for **array of char**s
+* **ustring** - predefined type for **array of uchar**s
 
 ## Arrays
 

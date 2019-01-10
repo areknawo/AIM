@@ -3,15 +3,15 @@ Comments in AIM can be either single- or multi-line. They’re meant to provide 
 
 ## Single-line comments
 
-Single-line comments in AIM are indicated with **>>** symbol, after which each token is ignored in the compilation process.
+Single-line comments in AIM are indicated with **>>>** symbol, after which each token is ignored in the compilation process.
 
 ```
->> Single-line comment
+>>> Single-line comment
 ```
 
 ## Multi-line comments
 
-Multi-line comments start just as single-line ones but - as they can be multi-line - their ending is marked with **<<** symbol. Because of using the same symbol for multi-line and single-line comments, the limit of lines might be required. For now, its considered to be 100. **WIP!** Changes to multi-line comments are likely to appear.
+Multi-line comments start with shorter **>>** symbol, and - as they can be multi-line - their ending is marked with **<<**. **WIP!** Changes to multi-line comments are likely to appear.
 
 ```
 >>

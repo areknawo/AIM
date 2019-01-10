@@ -1,5 +1,16 @@
 {
   "name": "@aimlang/core",
   "description": "AIM programming language core (lexer & parser)",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "scripts": {
+    "test": "jest test --notify"
+  },
+  "dependencies": {
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.11",
+    "jest": "^23.6.0"
+  }
 }

@@ -5,6 +5,11 @@
   "repository": "https://github.com/areknawo/aim",
   "author": "areknawo",
   "license": "MIT",
+  "engines": {"node": ">=10.13.0"},
   "private": true,
-  "workspaces": ["core", "syntax"]
+  "workspaces": [
+    "core",
+    "syntax"
+  ],
+  "dependencies": {}
 }
