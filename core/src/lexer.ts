@@ -59,12 +59,6 @@ export default class Lexer {
     return this;
   }
   /**
-   * Returns already processed tokens.
-   */
-  public getTokens() {
-    return this.tokens;
-  }
-  /**
    * Returns next processed token.
    */
   public next(): Token | undefined {
