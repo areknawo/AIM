@@ -9,15 +9,6 @@ const staticValueStart = mutatorStart;
 const staticValueEnd = mutatorEnd;
 // Define language tokens
 const grammar: GrammarStruct[] = [
-  // Basics
-  {
-    id: "newline",
-    match: "\\n"
-  },
-  {
-    id: "whitespace",
-    match: "\\s"
-  },
   // Comments
   {
     id: "single_line_comment_begin",

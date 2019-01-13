@@ -7,7 +7,7 @@ interface TokenData {
   column: number;
   length: number;
 }
-export default class Token {
+export default class Token implements TokenData {
   public value: string;
   public id: string;
   public line: number;

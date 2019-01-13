@@ -10,7 +10,16 @@ export default class Lexer {
   public column: number = 1;
   public line: number = 1;
   public data: string = "";
-  public grammar: GrammarStruct[] = [];
+  public grammar: GrammarStruct[] = [
+    {
+      id: "newline",
+      match: "\\n"
+    },
+    {
+      id: "whitespace",
+      match: "\\s"
+    }
+  ];
   private index: number = 0;
   private expr: string = "";
   private regex?: RegExp;
@@ -61,7 +70,7 @@ export default class Lexer {
   /**
    * Returns next processed token.
    */
-  public next(): Token | undefined {
+  public next() {
     const regex = this.getRegex();
     const match = regex.exec(this.data);
     if (match) {
@@ -110,6 +119,14 @@ export default class Lexer {
    */
   public update() {
     this.tokens = this.tokens
+      .filter(token => {
+        return token.value && token.value !== "";
+      })
+      .sort((a, b) => {
+        const line = a.line - b.line;
+        const column = a.column - b.column;
+        return line === 0 ? column : line;
+      })
       .map((token, index, tokens) => {
         if (index > 0) {
           const previous = tokens[index - 1];
@@ -124,14 +141,6 @@ export default class Lexer {
         } else {
           return token.moveTo(1, 1, false);
         }
-      })
-      .filter(token => {
-        return token.value && token.value !== "";
-      })
-      .sort((a, b) => {
-        const line = a.line - b.line;
-        const column = a.column - b.column;
-        return line === 0 ? column : line;
       });
 
     return this;
@@ -143,6 +152,7 @@ export default class Lexer {
     this.data = "";
     this.line = 1;
     this.column = 1;
+    this.index = 0;
     this.tokens = [];
 
     return this;
